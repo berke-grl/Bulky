@@ -1,0 +1,32 @@
+﻿@model Category
+
+<h1 class="pb-3">Are You Sure Want to Delete This Category</h1>
+
+<form method="post">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Category Name
+                </th>
+                <th>
+                    Display Orders
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Name</td>
+                <td>@Model.DisplayOrder</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row pt-3">
+        <div class="col-6">
+            <button type="submit" class="btn btn-danger form-control">Delete</button>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Category" asp-action="Index" class="btn btn-secondary btn-outline border form-control"> Back To List</a>
+        </div>
+    </div>
+</form>
